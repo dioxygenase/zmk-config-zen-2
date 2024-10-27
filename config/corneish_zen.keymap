@@ -179,7 +179,7 @@
         combo_lang {
             timeout-ms = <35>;
             key-positions = <34 35>;
-            bindings = <&macro_lang>;
+            bindings = <&kp LC(SPACE)>;
             layers = <0>;
         };
         combo_alfred {
