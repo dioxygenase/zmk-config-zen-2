@@ -9,13 +9,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define COL 0
-#define QWE 1
-#define SYM 2
-#define NAV 3
-#define NUM 4
-#define MOU 5
-#define FUN 6
+#define QWE 0
+#define SYM 1
+#define NAV 2
+#define NUM 3
+#define MOU 4
+#define FUN 5
 
 
 &lt { quick_tap_ms = <300>; };
@@ -24,14 +23,6 @@
 / {
     chosen {
       zmk,matrix_transform = &five_column_transform;
-    };
-    macros {
-        macro_lang: macro_lang {
-        compatible = "zmk,behavior-macro";
-        label = "macro_lang";
-        #binding-cells = <0>;
-        bindings = <&tog QWE>, <&kp LC(SPACE)>;
-        };
     };
     combos {
         compatible = "zmk,combos";
@@ -217,17 +208,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "COL";
-            bindings = <
-&kp Q           &kp W           &kp F           &kp P           &kp G           &kp J           &kp L           &kp U           &kp Y           &kp SEMICOLON 
-&hm LGUI A      &hm LALT R      &hm LCTL S      &hm LSFT T      &kp D           &kp H           &hm RSFT N      &hm RCTL E      &hm LALT I      &hm RGUI O 
-&kp Z           &kp X           &kp C           &kp V           &kp B           &kp K           &kp M           &kp CMMA        &kp DOT         &kp FSLH  
-                                                &lt NAV DEL       &lt SYM BKSP      &kp LSFT        &lt NUM TAB       &lt MOU SPC       &lt FUN ENTER
-            >;
-        };
-        QWE_layer {
             label = "QWE";
-            bindings = <
 &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P 
 &hm LGUI A      &hm LALT S      &hm LCTL D      &hm LSFT F      &kp G           &kp H           &hm RSFT J      &hm RCTL K      &hm LALT L      &hm RGUI SEMICOLON 
 &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp CMMA        &kp DOT         &kp FSLH  
